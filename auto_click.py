@@ -15,7 +15,7 @@ def getScreen():
     cv_image = np.array(pil_sc) 
 
     cv_image = cv_image[:, :, ::-1].copy()
-    cm=cv2.imread('cm_stop.png')
+    cm=cv2.imread('target.png')
     m_map = cv2.matchTemplate(cv_image, cm, cv2.TM_CCOEFF_NORMED)
     return m_map
     
